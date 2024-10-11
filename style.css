@@ -1,0 +1,46 @@
+* {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+}
+
+header{
+    background-color: lightskyblue;
+    align-items: center;
+
+}
+ul {
+    margin: 0;
+    padding:0;
+}
+
+li {
+    list-style: none; 
+    margin: 10px;
+    display: inline;
+}
+
+li a {
+    padding: 5px 10px; 
+    margin:0;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+li a:hover {
+    background-color: lightskyblue;
+    color: #000; 
+    border-color: #000;
+}
+
+ul {
+    margin: 0;
+    padding:0;
+}
+
+li {
+    list-style: none; 
+    margin: 10px;
+    display: inline;
+}
