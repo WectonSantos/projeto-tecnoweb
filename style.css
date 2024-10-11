@@ -8,7 +8,7 @@ body {
 .cabecalho {
     display: flex;
     justify-content: center; 
-    background-color: #1e90ff; 
+    background-color: rgb(0, 0, 0);
     padding: 15px 0; 
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .cabecalho a:hover {
-    color: #add8e6; 
+    color: #a5a5a5; 
 }
 
 .container{
@@ -65,6 +65,7 @@ body {
 }
 .nome{
     font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
 }
 .wecton{
     display: inline-block;
@@ -72,4 +73,27 @@ body {
 }
 .pedro{
     display: inline-block;
+}
+
+.imgWecton{
+    height: 300px;
+}
+
+.imgPedro{
+    height: 300px;
+}
+.infos{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
 }
