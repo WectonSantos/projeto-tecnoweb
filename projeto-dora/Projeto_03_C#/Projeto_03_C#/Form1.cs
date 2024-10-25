@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto_03_C_
 {
@@ -35,22 +36,26 @@ namespace Projeto_03_C_
             comecou = 0;
             x = aleatorio.Next(4, 9); 
 
-            int[] vetorImagens = new int[x + 1]; 
+            int[] vetorImagens = new int[x + 1];
 
-            for (int i = 0; i <= x; i++)
+            for (int i = 0; i < x; i++)
             {
-                y = aleatorio.Next(0, 100);
+                int y = aleatorio.Next(0, 100);
+                PictureBox pb = (PictureBox)Controls["pbJogo" + i]; // Fazendo o cast para PictureBox
                 if (y % 2 == 0)
                 {
                     vetorImagens[i] = 0;
+                    // Altera a imagem da PictureBox para a imagem correspondente a 0
+                    pb.Image = Image.FromFile("C:\\Users\\unisanta\\Pictures\\quadrado.png"); // Substitua pelo caminho da imagem
                 }
                 else
                 {
-                    vetorImagens[i] = 1; 
+                    vetorImagens[i] = 1;
+                    // Altera a imagem da PictureBox para a imagem correspondente a 1
+                    pb.Image = Image.FromFile("C:\\Users\\unisanta\\Pictures\\estrela.png"); // Substitua pelo caminho da imagem
                 }
             }
 
-            lblCerto.Text = string.Join(", ", vetorImagens);
 
         }
 

@@ -47,6 +47,7 @@
             this.btReiniciar = new System.Windows.Forms.Button();
             this.pbSom2 = new System.Windows.Forms.PictureBox();
             this.pbSom1 = new System.Windows.Forms.PictureBox();
+            this.pbJogo0 = new System.Windows.Forms.PictureBox();
             this.pbJogo1 = new System.Windows.Forms.PictureBox();
             this.pbJogo2 = new System.Windows.Forms.PictureBox();
             this.pbJogo3 = new System.Windows.Forms.PictureBox();
@@ -54,12 +55,12 @@
             this.pbJogo5 = new System.Windows.Forms.PictureBox();
             this.pbJogo6 = new System.Windows.Forms.PictureBox();
             this.pbJogo7 = new System.Windows.Forms.PictureBox();
-            this.pbJogo8 = new System.Windows.Forms.PictureBox();
             this.gbJogo.SuspendLayout();
             this.pPlacar.SuspendLayout();
             this.pImagens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogo0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo3)).BeginInit();
@@ -67,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo8)).BeginInit();
             this.SuspendLayout();
             // 
             // gbJogo
@@ -187,7 +187,6 @@
             // 
             this.pImagens.BackColor = System.Drawing.Color.LightSeaGreen;
             this.pImagens.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pImagens.Controls.Add(this.pbJogo8);
             this.pImagens.Controls.Add(this.pbJogo7);
             this.pImagens.Controls.Add(this.pbJogo6);
             this.pImagens.Controls.Add(this.pbJogo5);
@@ -195,6 +194,7 @@
             this.pImagens.Controls.Add(this.pbJogo3);
             this.pImagens.Controls.Add(this.pbJogo2);
             this.pImagens.Controls.Add(this.pbJogo1);
+            this.pImagens.Controls.Add(this.pbJogo0);
             this.pImagens.Location = new System.Drawing.Point(6, 40);
             this.pImagens.Name = "pImagens";
             this.pImagens.Size = new System.Drawing.Size(200, 370);
@@ -254,77 +254,77 @@
             this.pbSom1.TabIndex = 5;
             this.pbSom1.TabStop = false;
             // 
+            // pbJogo0
+            // 
+            this.pbJogo0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbJogo0.Location = new System.Drawing.Point(20, 27);
+            this.pbJogo0.Name = "pbJogo0";
+            this.pbJogo0.Size = new System.Drawing.Size(50, 50);
+            this.pbJogo0.TabIndex = 0;
+            this.pbJogo0.TabStop = false;
+            // 
             // pbJogo1
             // 
             this.pbJogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo1.Location = new System.Drawing.Point(20, 27);
+            this.pbJogo1.Location = new System.Drawing.Point(20, 98);
             this.pbJogo1.Name = "pbJogo1";
             this.pbJogo1.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo1.TabIndex = 0;
+            this.pbJogo1.TabIndex = 1;
             this.pbJogo1.TabStop = false;
             // 
             // pbJogo2
             // 
             this.pbJogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo2.Location = new System.Drawing.Point(20, 98);
+            this.pbJogo2.Location = new System.Drawing.Point(20, 166);
             this.pbJogo2.Name = "pbJogo2";
             this.pbJogo2.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo2.TabIndex = 1;
+            this.pbJogo2.TabIndex = 2;
             this.pbJogo2.TabStop = false;
             // 
             // pbJogo3
             // 
             this.pbJogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo3.Location = new System.Drawing.Point(20, 166);
+            this.pbJogo3.Location = new System.Drawing.Point(20, 234);
             this.pbJogo3.Name = "pbJogo3";
             this.pbJogo3.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo3.TabIndex = 2;
+            this.pbJogo3.TabIndex = 3;
             this.pbJogo3.TabStop = false;
             // 
             // pbJogo4
             // 
             this.pbJogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo4.Location = new System.Drawing.Point(20, 234);
+            this.pbJogo4.Location = new System.Drawing.Point(102, 27);
             this.pbJogo4.Name = "pbJogo4";
             this.pbJogo4.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo4.TabIndex = 3;
+            this.pbJogo4.TabIndex = 4;
             this.pbJogo4.TabStop = false;
             // 
             // pbJogo5
             // 
             this.pbJogo5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo5.Location = new System.Drawing.Point(102, 27);
+            this.pbJogo5.Location = new System.Drawing.Point(102, 98);
             this.pbJogo5.Name = "pbJogo5";
             this.pbJogo5.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo5.TabIndex = 4;
+            this.pbJogo5.TabIndex = 5;
             this.pbJogo5.TabStop = false;
             // 
             // pbJogo6
             // 
             this.pbJogo6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo6.Location = new System.Drawing.Point(102, 98);
+            this.pbJogo6.Location = new System.Drawing.Point(102, 166);
             this.pbJogo6.Name = "pbJogo6";
             this.pbJogo6.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo6.TabIndex = 5;
+            this.pbJogo6.TabIndex = 6;
             this.pbJogo6.TabStop = false;
             // 
             // pbJogo7
             // 
             this.pbJogo7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo7.Location = new System.Drawing.Point(102, 166);
+            this.pbJogo7.Location = new System.Drawing.Point(102, 234);
             this.pbJogo7.Name = "pbJogo7";
             this.pbJogo7.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo7.TabIndex = 6;
+            this.pbJogo7.TabIndex = 7;
             this.pbJogo7.TabStop = false;
-            // 
-            // pbJogo8
-            // 
-            this.pbJogo8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbJogo8.Location = new System.Drawing.Point(102, 234);
-            this.pbJogo8.Name = "pbJogo8";
-            this.pbJogo8.Size = new System.Drawing.Size(50, 50);
-            this.pbJogo8.TabIndex = 7;
-            this.pbJogo8.TabStop = false;
             // 
             // Form1
             // 
@@ -343,6 +343,7 @@
             this.pImagens.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbSom2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogo0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo3)).EndInit();
@@ -350,7 +351,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJogo7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogo8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,7 +374,6 @@
         private System.Windows.Forms.Button btReiniciar;
         private System.Windows.Forms.Button btAutores;
         private System.Windows.Forms.Button btnJogar;
-        private System.Windows.Forms.PictureBox pbJogo8;
         private System.Windows.Forms.PictureBox pbJogo7;
         private System.Windows.Forms.PictureBox pbJogo6;
         private System.Windows.Forms.PictureBox pbJogo5;
@@ -382,6 +381,7 @@
         private System.Windows.Forms.PictureBox pbJogo3;
         private System.Windows.Forms.PictureBox pbJogo2;
         private System.Windows.Forms.PictureBox pbJogo1;
+        private System.Windows.Forms.PictureBox pbJogo0;
     }
 }
 
