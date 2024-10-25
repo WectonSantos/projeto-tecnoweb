@@ -256,16 +256,17 @@
             // 
             // pbJogo0
             // 
-            this.pbJogo0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbJogo0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbJogo0.Location = new System.Drawing.Point(20, 27);
             this.pbJogo0.Name = "pbJogo0";
             this.pbJogo0.Size = new System.Drawing.Size(50, 50);
             this.pbJogo0.TabIndex = 0;
             this.pbJogo0.TabStop = false;
+            this.pbJogo0.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbJogo0_DragDrop);
             // 
             // pbJogo1
             // 
-            this.pbJogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbJogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbJogo1.Location = new System.Drawing.Point(20, 98);
             this.pbJogo1.Name = "pbJogo1";
             this.pbJogo1.Size = new System.Drawing.Size(50, 50);
