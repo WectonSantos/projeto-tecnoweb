@@ -14,12 +14,16 @@
 
 <body>
     <header class="cabecalho">
+        <div class="logo">
+            <img src="images/tony country.png" alt="Logo do Projeto">
+        </div>
         <ul>
             <li><a href="#sobre">Sobre o nosso projeto</a></li>
             <li><a href="#apresentacao">Apresentação</a></li>
             <li><a href="#quemSomos">Quem somos nós?</a></li>
         </ul>
-    </header>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+        </header>
 
     <div id="loading" class="loading">
         <div class="spinner"></div>
@@ -29,12 +33,45 @@
     <div class="container">
 
         <div class="sobre" id="sobre">
-            <h2>Sobre o nosso projeto</h2>
-            <p>Projeto da Dora, disciplina Programação Visual e Games</p>
+            <h2>O que é o projeto?</h2>
+            <div class="sobre-content">
+                <div class="sobre-left">
+                    <p> 
+                    Durante a disciplina Programação Visual e Games ministrada pelas professoras Dora e Raquel,
+                    houve a proposta do projeto de um jogo para desafiar o nível de lógica dos alunos,
+                    onde eles, separados em trios, deveriam desenvolver um jogo inteiro do zero, com um tema
+                    que seria sorteado e as ferramentas abordadas em sala de aula.
+                    </p>
+                    <p>
+                    Após o sorteio da temática, os desenvolvedores se reuniram para discutir como poderiam criar tudo aquilo
+                    que foi proposto, levando em consideração toda a parte lógica e as respectivas estruturas que as ferramentas
+                    fornecem.
+                    </p>
+                    <p>Durante a elaboração do jogo foi utilizado o C#, da Microsoft, como linguagem de programação 
+                        e o Visual Studio como ambiente de desenvolvimento.
+                    </p>
+                </div>
+                <div class="sobre-right">
+
+                    <div class="imgFerramentas">
+                        <img src="images/csharp.png" alt="Imagem do Projeto" class="img-projeto">
+                        <img src="images/vs.png" alt="Imagem do Projeto" class="img-projeto">
+                    </div>
+                    <p>O C# é uma linguagem de programação muito utilizada na criação de jogos, porém não nessa
+                        IDE que é o Visual Studio, que por sua vez tem como foco principal o desenvolvimento de
+                        softwares para desktop. Por isso o nível de dificuldade do projeto acabou sendo maior, pois coisas que seriam
+                        simples de se fazer em um ambiente próprio de programação de games, acabaram sendo muito mais complicadas, já
+                        que a ferramenta não tem esse objetivo. Porém apesar de tudo, esse desafio proposto pelas professoras foi uma
+                        excelente experiência de desenvolvimento que ajudou a fortalecer muito nossas lógicas, e com certeza irá agregar
+                        muito em futuros trabalhos tanto na vida acadêmica quanto profissional.
+
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="apresentacao" id="apresentacao">
-            <h2>Apresentação</h2>
+            <h2>O Jogo</h2>
             
             <div class="steam-page">
                 <!-- Informações do jogo -->
@@ -81,17 +118,15 @@
                     <div class="buy-button">
                         <button>Comprar por R$ 99,99</button>
                     </div>
-
-                    <img src="images/unisanta.jpg" alt="unisanta" class="imgUnisanta">
                 </div>
         
                 <!-- Mídia do jogo -->
                 <div class="game-media">
                     <div class="screenshots">
                         <div class="carousel-container">
-                            <img src="images/wecton.jpg" alt="Screenshot 1" class="carousel-image active">
-                            <img src="images/pedro.jpeg" alt="Screenshot 2" class="carousel-image">
-                            <img src="images/tony country.png" alt="Screenshot 3" class="carousel-image">
+                            <img src="images/jogo1.jpeg" alt="Screenshot 1" class="carousel-image active">
+                            <img src="images/jogo2.jpeg" alt="Screenshot 2" class="carousel-image">
+                            <img src="images/jogo3.jpeg" alt="Screenshot 3" class="carousel-image">
                             <div class="carousel-nav">
                                 <button class="prev" onclick="moveScreenshot(-1)">&#10094;</button>
                                 <button class="next" onclick="moveScreenshot(1)">&#10095;</button>
@@ -116,8 +151,12 @@
             </div> 
             <div class="wecton">
                 <p class="nome">Wecton Santos</p>
-                <img src="images/wecton.jpg" class="imgWecton" alt="">
-                <p class="infos">Programador</p>
+                <img src="images/wecton.png" class="imgWecton" alt="">
+                <p class="infos">
+                   <!--Natural de Santos, técnico formado em Programação de Jogos Digitais e Informática e Suporte pela Etec de Cubatão 
+                   e aluno do 4º Semestre de Engenharia de Computação pela Universidade Santa Cecília.-->
+                   Programador
+                </p>
             </div>
         </div>
 
@@ -126,6 +165,8 @@
                 <span class="close-btn">&times;</span>
                 <h2 id="popup-name"></h2>
                 <p id="popup-info"></p>
+                <button id="pause-music" class="pause-music">Pausar Música</button>
+                <a href="curriculo.html" class="curriculo-btn">Ver Currículo</a>
             </div>
         </div>
 

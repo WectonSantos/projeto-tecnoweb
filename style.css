@@ -3,25 +3,39 @@ body {
     font-family: Arial, sans-serif;
     background-color: #d5d9dd; 
     height: 100%; /* Garantir que o body ocupe toda a altura da página */
-    display: flex; /* Usado para centralizar conteúdo verticalmente */
+    display: block; /* Usado para centralizar conteúdo verticalmente */
     flex-direction: column;
     justify-content: center; /* Centraliza o conteúdo verticalmente */
     align-items: center; 
+    width: 100%; /* Garantir que o corpo ocupe toda a largura */
+
 }
 
 .cabecalho {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
+    align-items: center; 
     background-color: rgb(0, 0, 0);
     padding: 15px 0; 
     width: 100%;
+    flex: 1;
+    width: 100%; /* Garantir que o cabeçalho ocupe toda a largura da tela */
 
+}
+.cabecalho .logo img {
+    height: 40px;
+    padding-left: 20px;
+    flex: 1; /* Faz o logo ocupar o máximo de espaço possível */
+    display: flex;
+    justify-content: flex-start; /* Alinha o logo à esquerda */
 }
 
 .cabecalho ul {
     padding: 0; 
     margin: 0; 
-    display: flex; 
+    flex: 2; /* Dá mais espaço para o menu */
+    display: flex;
+    justify-content: center;
 }
 
 .cabecalho li {
@@ -38,6 +52,20 @@ body {
 
 .cabecalho a:hover {
     color: #a5a5a5; 
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -57,6 +85,62 @@ body {
     text-align: center;
     border-radius: 5px;
 }
+.sobre-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sobre-left, .sobre-right {
+    flex: 1;
+}
+
+.sobre-right img {
+    width: 100%;
+    border-radius: 10px;
+}
+.sobre-right {
+    display: flex;              
+    flex-direction: column;     
+    align-items: center;         
+    padding: 20px;               /* Adiciona um espaçamento interno */
+    text-align: center;          
+}
+
+.sobre-right p {
+    margin-bottom: 20px;         /* Adiciona um espaçamento abaixo do texto */
+    font-size: 18px;             /* Ajusta o tamanho do texto */
+}
+
+.imgFerramentas {
+    display: flex;               /* Flexbox para alinhar as imagens lado a lado */
+    justify-content: center;     /* Centraliza as imagens */
+    gap: 20px;                   /* Define o espaço entre as imagens */
+}
+
+.img-projeto {
+    width: 120px;                 /* Define uma largura fixa para as imagens */
+    height: auto;                /* Mantém a proporção das imagens */
+    max-height: 140px;           /* Limita a altura das imagens */
+    object-fit: contain;         /* Garante que a imagem se ajuste corretamente */
+    transition: transform 0.3s ease;  /* Adiciona transição para efeito de hover */
+}
+
+.img-projeto:hover {
+    transform: scale(1.1);       /* Efeito de zoom quando passar o mouse */
+}
+
+
+
+.sobre-left {
+    padding-right: 20px;
+}
+
+.sobre-left p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 .apresentacao{
     width: 100%; 
     margin: 10px 0; 
@@ -87,11 +171,14 @@ body {
 .imgWecton{
     height: 300px;
     transition: transform 0.3s ease;
+    border-radius: 10%;
 }
 
 .imgPedro{
     height: 300px;
     transition: transform 0.3s ease;
+    border-radius: 10%;
+
 }
 .infos{
     font-family: 'Times New Roman', Times, serif;
@@ -135,7 +222,29 @@ footer{
     text-align: center;
 
 }
+.pause-music {
+    background-color: #10881e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
+.curriculo-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.curriculo-btn:hover {
+    background-color: #2980b9;
+}
 .close-btn {
     color: #aaa;
     float: right;
@@ -166,6 +275,8 @@ footer{
 
 .imgPedro:hover, .imgWecton:hover {
     transform: scale(1.1);
+    cursor: pointer;
+
 }
 
 header ul li a {
@@ -342,4 +453,84 @@ h2 {
 
 .imgUnisanta{
     padding-top: 20%;
+}
+
+/* Tema Escuro */
+body.dark-theme {
+    background-color: #121212; /* Cor de fundo escuro */
+    color: #f5f5f5; /* Cor do texto escuro */
+}
+
+body.dark-theme header {
+    background-color: #1c1c1c; /* Cor do fundo do cabeçalho escuro */
+}
+
+body.dark-theme .cabecalho a {
+    color: #bbb; /* Cor dos links no tema escuro */
+}
+
+body.dark-theme .cabecalho a:hover {
+    color: #fff; /* Cor dos links ao passar o mouse no tema escuro */
+}
+
+body.dark-theme .sobre,
+body.dark-theme .apresentacao,
+body.dark-theme .quemSomos {
+    background-color: #333; /* Fundo escuro para as seções */
+    color: #f5f5f5; /* Texto claro para as seções */
+}
+
+/* Estilo para o botão de alternância de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 50%; /* Botão circular */
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Quando no tema escuro, o ícone de alternância muda de cor */
+body.dark-theme .theme-toggle {
+    color: #fff; /* Cor do botão no tema escuro */
+}
+
+/* Adicionar animação ao botão */
+.theme-toggle:focus {
+    outline: none;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover */
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Efeito de hover no tema escuro */
+}
+
+/* Efeitos para botões e outras seções */
+button, .curriculo-btn {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme button,
+body.dark-theme .curriculo-btn {
+    background-color: #2c3e50; /* Cor de fundo para botões no tema escuro */
+}
+
+body.dark-theme button:hover,
+body.dark-theme .curriculo-btn:hover {
+    background-color: #34495e; /* Cor de hover para botões no tema escuro */
 }

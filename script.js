@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const popupInfo = document.getElementById("popup-info");
     const closeBtn = document.querySelector(".close-btn");
     const audio = document.getElementById("audio");
-
     const pessoas = [
         {
             nome: "Pedro Henrique Morereira",
@@ -93,3 +92,46 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // fim parte da pag jogo
+
+// pause + tema escuro
+
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('theme-toggle');
+    const audio = document.getElementById('audio');
+    const pauseMusicButton = document.getElementById('pause-music');
+    
+    // Verifica a preferência de tema do usuário no localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.textContent = '🌞'; // Mudar o ícone para o tema claro
+    } else {
+        document.body.classList.remove('dark-theme');
+        themeToggle.textContent = '🌙'; // Mudar o ícone para o tema escuro
+    }
+
+    // Alternar entre os temas e atualizar a preferência no localStorage
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '🌞'; // Ícone do tema claro
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '🌙'; // Ícone do tema escuro
+        }
+    });
+
+    // Função para pausar a música
+    if (pauseMusicButton) {
+        pauseMusicButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                pauseMusicButton.textContent = 'Pausar Música';
+            } else {
+                audio.pause();
+                pauseMusicButton.textContent = 'Retomar Música';
+            }
+        });
+    }
+});
