@@ -1,0 +1,4 @@
+Como os marcadores de HTML ("programadores html") fazem pra dimencionar as imagens que colocam nos sites? tipo, como eles sabem qual o tamanho da imagem que não vai ficar fora de proporção ou estranho no site?
+
+Boas praticas de programação em html, sinto que estou inserindo delimitações desnecessárias (sections, divs, asides)
+

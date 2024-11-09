@@ -1,0 +1,49 @@
+body{
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+html{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #1b2838;
+    color: white;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.HeaderUsuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 20vh;
+    overflow: hidden;
+    background-color: rgba(9, 10.2, 12.9, 0.5); /* #171a21 */
+}
+
+.ImgUsuario{
+    border-color: #66c0f4;
+    border-width: 2px;
+    border-style: solid;
+    margin: 1%;
+}
+
+.InformacoesUsuario{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ImagemNome{
+    display: flex;
+    justify-content: flex-start;
+}
