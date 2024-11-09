@@ -55,3 +55,41 @@ window.addEventListener('scroll', () => {
 window.onload = () => {
     document.getElementById('loading').style.display = 'none';
 };
+
+// parte da pag de jogo
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+    const totalImages = images.length;
+
+    // Função para alterar a imagem (manual ou automático)
+    function moveScreenshot(step) {
+        // Remover a classe 'active' da imagem atual
+        images[currentIndex].classList.remove('active');
+        
+        // Calcular o próximo índice, garantindo que seja circular
+        currentIndex = (currentIndex + step + totalImages) % totalImages;
+        
+        // Adicionar a classe 'active' à próxima imagem
+        images[currentIndex].classList.add('active');
+    }
+
+    // Função de autoplay (avança automaticamente)
+    function autoPlay() {
+        moveScreenshot(1); // Avançar uma imagem
+    }
+
+    // Ativar o autoplay a cada 3 segundos
+    setInterval(autoPlay, 3000);
+
+    // Vincular os botões de navegação manual
+    document.querySelector('.prev').addEventListener('click', function() {
+        moveScreenshot(-1); // Voltar uma imagem
+    });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        moveScreenshot(1); // Avançar uma imagem
+    });
+});
+
+// fim parte da pag jogo
