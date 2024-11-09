@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -77,10 +76,12 @@ body {
 
 .imgWecton{
     height: 300px;
+    transition: transform 0.3s ease;
 }
 
 .imgPedro{
     height: 300px;
+    transition: transform 0.3s ease;
 }
 .infos{
     font-family: 'Times New Roman', Times, serif;
@@ -109,6 +110,9 @@ footer{
     height: 100%; 
     overflow: auto; 
     background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+
 }
 
 .popup-content {
@@ -118,6 +122,8 @@ footer{
     border: 1px solid #888;
     width: 80%; 
     max-width: 500px;
+    text-align: center;
+
 }
 
 .close-btn {
@@ -125,6 +131,8 @@ footer{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+
 }
 
 .close-btn:hover,
@@ -135,3 +143,147 @@ footer{
 }
 
 /*FIM POP UP*/
+.sobre, .apresentacao, .quemSomos {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.sobre.visible, .apresentacao.visible, .quemSomos.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imgPedro:hover, .imgWecton:hover {
+    transform: scale(1.1);
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header ul li a:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+/* responsivo */
+
+@media (max-width: 768px) {
+    header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .popup-content {
+        width: 80%;
+    }
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #3498db;
+    width: 0;
+    animation: typing 2s steps(30) 1s forwards;
+}
+/*parte do jogo*/
+
+.steam-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.game-info {
+    flex: 1;
+    max-width: 500px;
+    background-color: #1b2838;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.game-header h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-description p, .game-reviews p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.buy-button button {
+    background-color: #8d8d8d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.buy-button button:hover {
+    background-color: #4e9cfd;
+}
+
+.game-media {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.screenshots img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.trailer iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+}
+/* fim jogo*/

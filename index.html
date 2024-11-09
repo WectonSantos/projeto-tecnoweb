@@ -21,6 +21,11 @@
         </ul>
     </header>
 
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+    
+
     <div class="container">
 
         <div class="sobre" id="sobre">
@@ -31,13 +36,75 @@
         <div class="apresentacao" id="apresentacao">
             <h2>Apresentação</h2>
             <p>Detalhes da apresentação...</p>
+
+            
+            <div class="steam-page">
+                <!-- Informações do jogo -->
+                <div class="game-info">
+                    <div class="game-header">
+                        <h3>Nome do Jogo</h3>
+                        <p>Gênero: Aventura | Desenvolvedor: Desenvolvedor X</p>
+                    </div>
+        
+                    <div class="game-description">
+                        <p>Descrição do jogo: Uma descrição longa e detalhada sobre o jogo, explicando as mecânicas, história, etc.</p>
+                    </div>
+        
+                    <!-- Requisitos do sistema -->
+                    <div class="game-requirements">
+                        <h4>Requisitos Mínimos</h4>
+                        <ul>
+                            <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                            <li><strong>Processador:</strong> Intel i5</li>
+                            <li><strong>Memória:</strong> 8GB RAM</li>
+                            <li><strong>Placa de vídeo:</strong> NVIDIA GTX 960</li>
+                            <li><strong>Armazenamento:</strong> 30GB</li>
+                        </ul>
+        
+                        <h4>Requisitos Recomendados</h4>
+                        <ul>
+                            <li><strong>Sistema Operacional:</strong> Windows 10</li>
+                            <li><strong>Processador:</strong> Intel i7</li>
+                            <li><strong>Memória:</strong> 16GB RAM</li>
+                            <li><strong>Placa de vídeo:</strong> NVIDIA GTX 1060</li>
+                            <li><strong>Armazenamento:</strong> 50GB</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Informações extras -->
+                    <div class="game-extra-info">
+                        <p><strong>Áudio:</strong> Português, Inglês</p>
+                        <p><strong>Idiomas:</strong> Português, Inglês, Espanhol</p>
+                        <p><strong>Modo de Jogo:</strong> Single-player</p>
+                        <p><strong>Compatibilidade:</strong> Windows, Mac</p>
+                    </div>
+        
+                    <!-- Botão de comprar -->
+                    <div class="buy-button">
+                        <button>Comprar por R$ 99,99</button>
+                    </div>
+                </div>
+        
+                <!-- Mídia do jogo -->
+                <div class="game-media">
+                    <div class="screenshots">
+                        <img src="image1.jpg" alt="Screenshot 1" class="active" onclick="changeScreenshot(1)">
+                        <img src="image2.jpg" alt="Screenshot 2" onclick="changeScreenshot(2)">
+                        <img src="image3.jpg" alt="Screenshot 3" onclick="changeScreenshot(3)">
+                    </div>
+        
+                    <div class="trailer">
+                        <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="quemSomos" id="quemSomos">
             <h2>Quem somos nós?</h2>
             <div class="pedro">
-                <p class="nome">Pedro Henrique Morereira</p>
-                <img src="images/tony-country-772308.jpg" class="imgPedro" alt="">
+                <p class="nome">Pedro Henrique Moreira</p>
+                <img src="images/pedro.jpeg" class="imgPedro" alt="">
                 <p class="infos">Programador</p>
 
             </div> 

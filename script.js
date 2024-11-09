@@ -42,3 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.sobre, .apresentacao, .quemSomos');
+    elements.forEach(element => {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+            element.classList.add('visible');
+        }
+    });
+});
+
+window.onload = () => {
+    document.getElementById('loading').style.display = 'none';
+};
