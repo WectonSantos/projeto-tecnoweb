@@ -798,7 +798,9 @@ body.dark-theme .popup-content p {
 body.dark-theme .close-btn {
     color: #fff; /* Cor branca para o botão de fechar */
 }
-
+body.dark-theme .close-btn:hover {
+    color: #ff0000; /* Cor branca para o botão de fechar */
+}
 /* Estilo do botão de pausar música no pop-up */
 body.dark-theme .pause-music {
     background-color: #2980b9; /* Cor de fundo azul para o botão */
