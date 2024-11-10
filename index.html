@@ -11,12 +11,7 @@
     <audio id="audio" src=""></audio>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 
-    <audio id="background-music" autoplay loop>
-        <source src="caminho-do-som.mp3" type="audio/mp3">
-        Seu navegador não suporta áudio.
-    </audio>
-    
+
 </head>
 
 <body>
@@ -159,7 +154,7 @@
                 <img src="images/wecton.png" class="imgWecton" alt="">
             </div>
         </div>
-
+        <!-- pop up dos dev -->
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
@@ -169,6 +164,28 @@
                 <a id="curriculo-link" href="#" target="_blank" class="curriculo-btn">Ver Currículo</a>
             </div>
         </div>
+
+        <!-- pop up da compra -->
+        <div id="popup-compra" class="popup-compra">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                
+                <!-- Círculo com o ícone de confirmação -->
+                <div class="icon-container">
+                    <div class="check-icon-container">
+                        <!-- Ícone de Check (Confirmado) -->
+                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <h2>Compra Confirmada!</h2>
+                <p>Obrigado pela sua compra. O pagamento foi processado com sucesso!</p>
+            </div>
+        </div>
+
+
 
         
     </div>

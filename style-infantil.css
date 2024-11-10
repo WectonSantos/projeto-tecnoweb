@@ -308,6 +308,127 @@ footer{
     text-decoration: none;
     cursor: pointer;
 }
+/* Pop-up de compra */
+.popup-compra {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Quando o pop-up está visível */
+.popup-compra.show {
+    display: flex; /* Exibe o pop-up */
+    opacity: 1;
+}
+
+/* Conteúdo do pop-up */
+.popup-compra .popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(0.8);
+    animation: showPopup 0.3s forwards; /* Animação de entrada */
+}
+
+/* Animação do pop-up */
+@keyframes showPopup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Círculo verde com o ícone de confirmação */
+.popup-compra .check-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    animation: iconAnimation 0.8s ease-in-out;
+}
+
+/* Efeito de zoom e animação do ícone */
+@keyframes iconAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Ícone de "check" */
+.popup-compra .check-icon {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 48px;
+    height: 48px;
+}
+
+/* Título e descrição do pop-up */
+.popup-compra h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.popup-compra p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botão de fechar */
+.popup-compra .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.popup-compra .close-btn:hover {
+    color: red;
+}
+
+/* Efeito de fechamento do pop-up */
+.popup-compra.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 
 /*FIM POP UP*/
 .sobre, .apresentacao, .quemSomos {
@@ -691,4 +812,21 @@ body.dark-theme footer a {
 
 body.dark-theme footer a:hover {
     color: #3498db; /* Cor de hover para os links no footer */
+}
+body.dark-theme {
+    font-family: 'Roboto', sans-serif; /* Fonte mais séria no tema escuro */
+}
+/* Quando o tema escuro está ativado */
+body.dark-theme .cabecalho {
+    background-color: #1c1c1c; /* Cor do fundo do cabeçalho no tema escuro */
+}
+
+/* Cor dos links no cabeçalho no tema escuro */
+body.dark-theme .cabecalho a {
+    color: #fff; /* Cor dos links no tema escuro (branco) */
+}
+
+/* Efeito de hover nos links no cabeçalho no tema escuro */
+body.dark-theme .cabecalho a:hover {
+    color: #3498db; /* Cor dos links ao passar o mouse (azul) */
 }

@@ -271,9 +271,37 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+//pop up de compra
 
-// audio interativo p mulecada
-document.querySelector('.theme-toggle').addEventListener('mouseover', function() {
-    const audio = new Audio('caminho-do-som.mp3');
-    audio.play();
+// Script para abrir o pop-up de confirmação
+document.addEventListener('DOMContentLoaded', function () {
+    const buyButton = document.querySelector('.buy-button button');
+    const popupCompra = document.getElementById('popup-compra');
+    const closeBtn = document.querySelector('.popup-compra .close-btn');
+
+    // Mostrar o pop-up quando clicar no botão de comprar
+    buyButton.addEventListener('click', function () {
+        popupCompra.classList.add('show');
+        popupCompra.classList.remove('hide');
+    });
+
+    // Fechar o pop-up quando clicar no botão "X"
+    closeBtn.addEventListener('click', function () {
+        popupCompra.classList.remove('show');
+        popupCompra.classList.add('hide');
+        setTimeout(function () {
+            popupCompra.style.display = 'none'; // Esconde após animação
+        }, 300);
+    });
+
+    // Fechar o pop-up se clicar fora do conteúdo
+    window.addEventListener('click', function (e) {
+        if (e.target === popupCompra) {
+            popupCompra.classList.remove('show');
+            popupCompra.classList.add('hide');
+            setTimeout(function () {
+                popupCompra.style.display = 'none'; // Esconde após animação
+            }, 300);
+        }
+    });
 });
