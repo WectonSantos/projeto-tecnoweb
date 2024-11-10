@@ -155,13 +155,13 @@ document.addEventListener("DOMContentLoaded", function() {
             nome: "Pedro Henrique Morereira",
             info: "Programador",
             musica: "musicas/tony-country.mp3",
-            curriculo: "curriculos/curriculoHtml/index.html" // Link para o currículo
+            curriculo: "curriculos/curriculoHtml/index.html"
         },
         {
             nome: "Wecton Santos",
             info: "Natural de Santos e residente de Cubatão, Wecton tem formações de Técnico em Programação de Jogos e Técnico em Informática e Suporte pela Etec de Cubatão, além de ser aluno do 4º Semestre em Engenharia de Computação na Universidade Santa Cecília. Apaixonado pelo Santos Futebol Clube e cinefílo assíduo, possui habilidades de programação em variadas linguagens e tem como objetivo trabalhar na área de desenvolvimento de softwares.",
             musica: "musicas/wecton.mp3",
-            curriculo: "curriculos/projeto/index.html" // Link para o currículo
+            curriculo: "curriculos/projeto/index.html"
         }
     ];
 
@@ -273,7 +273,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //pop up de compra
 
-// Script para abrir o pop-up de confirmação
 document.addEventListener('DOMContentLoaded', function () {
     const buyButton = document.querySelector('.buy-button button');
     const popupCompra = document.getElementById('popup-compra');
@@ -281,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mostrar o pop-up quando clicar no botão de comprar
     buyButton.addEventListener('click', function () {
+        popupCompra.style.display = 'block'; // Garante que o pop-up seja exibido
         popupCompra.classList.add('show');
         popupCompra.classList.remove('hide');
     });
@@ -306,7 +306,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//acessibilidade
+
+/*acessibilidade
 function lerTexto() {
     // Se a API de síntese de fala está disponível
     if ('speechSynthesis' in window) {
@@ -324,4 +325,4 @@ function lerTexto() {
     } else {
         alert("Desculpe, sua versão do navegador não suporta leitura de tela.");
     }
-}
+}*/
