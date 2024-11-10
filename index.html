@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação do Projeto</title>
     <link rel="stylesheet" href="style-infantil.css">
+    <link rel="stylesheet" href="responsivo.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <audio id="audio" src=""></audio>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
@@ -24,6 +24,10 @@
             <li><a href="#apresentacao">Apresentação</a></li>
             <li><a href="#quemSomos">Quem somos nós?</a></li>
         </ul>
+        <button id="ler-em-voz-alta" class ='def-aud' onclick="lerTexto()" aria-label="Ler conteúdo em voz alta">
+            <img src="images/cego.png" style = 'height: 30px;' alt="deficiente auditivo">
+        </button>
+
         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
         </header>
 
@@ -160,7 +164,7 @@
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
                 <h2 id="popup-name"></h2>
-                <p id="popup-info"></p>
+                <p id="popup-info" class="popup-info"></p>
                 <button id="pause-music" class="pause-music">Pausar Música</button>
                 <a id="curriculo-link" href="#" target="_blank" class="curriculo-btn">Ver Currículo</a>
             </div>
@@ -186,7 +190,8 @@
             </div>
         </div>    
     </div>
-
+    <iframe src="vlibras.html" style="position: fixed; bottom: 25%; right: 10px; border: none; width: 350px; height: 350px; z-index: 9999;"></iframe>
     <footer>© Todos os Direitos Reservados para Pedro e Wecton</footer>
 </body>
+
 </html>

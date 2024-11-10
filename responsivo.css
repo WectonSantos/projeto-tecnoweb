@@ -1,0 +1,413 @@
+/* Responsivo */
+@media (max-width: 1024px) {
+    body {
+        background-image: url('https://st2.depositphotos.com/3224447/12093/v/450/depositphotos_120935858-stock-illustration-seamless-pattern-with-doodle-children.jpg');
+        background-repeat: repeat;
+        background-blend-mode: soft-light;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .cabecalho .logo img {
+        height: 35px;
+        padding-left: 0;
+    }
+
+    .cabecalho ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cabecalho li {
+        margin: 10px 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .sobre, .apresentacao, .quemSomos {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-left, .sobre-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .sobre-left p, .sobre-right p {
+        font-size: 16px;
+    }
+
+    .imgFerramentas {
+        flex-direction: column;
+    }
+
+    .img-projeto {
+        width: 100px;
+        max-height: 120px;
+    }
+
+    .imgWecton, .imgPedro {
+        height: 250px;
+        width: 250px;
+    }
+
+    .steam-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-info {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .game-media {
+        width: 100%;
+    }
+
+    .popup-compra .popup-content {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .popup-compra .check-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .carousel-nav button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .loading {
+        width: 100%;
+        height: 100%;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle {
+        font-size: 28px;
+    }
+
+    .theme-toggle:hover {
+        transform: rotate(180deg);
+    }
+
+    .curriculo-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Impede o arraste horizontal */
+        height: 100%; /* Garante que a altura da tela seja 100% */
+    }
+    
+    * {
+        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden; /* Impede o overflow horizontal */
+    }
+    
+    .container, .wecton, .pedro {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .cabecalho {
+        padding: 10px;
+    }
+
+    .cabecalho .logo img {
+        height: 30px;
+    }
+
+    .cabecalho ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho li {
+        margin: 5px 0;
+    }
+
+    .sobre, .apresentacao, .quemSomos {
+        padding: 15px;
+    }
+
+    .sobre-left, .sobre-right {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .sobre-left p, .sobre-right p {
+        font-size: 14px;
+    }
+
+    .imgFerramentas {
+        flex-direction: column;
+    }
+
+    .img-projeto {
+        width: 80px;
+    }
+
+    .game-info, .game-media {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .popup-compra .popup-content {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .popup-compra .check-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .carousel-nav button {
+        padding: 8px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .spinner {
+        width: 30px;
+        height: 30px;
+    }
+
+    .theme-toggle {
+        font-size: 26px;
+    }
+
+    .curriculo-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .wecton, .pedro {
+        display: block;
+        margin: 0 auto; /* Centraliza os elementos */
+        padding-left: 0; /* Remove o padding-left para evitar o desalinhamento */
+    }
+    
+    /* Ajusta o tamanho das imagens para garantir que fiquem bem centralizadas */
+    .imgWecton, .imgPedro {
+        margin: 0 auto; /* Centraliza as imagens */
+    }
+    
+    /* Garantir que o layout de `.img-projeto` também se ajuste responsivamente */
+    .img-projeto {
+        width: 100%; /* Para imagens dentro de contêineres flexíveis */
+        max-width: 150px; /* Define um tamanho máximo para as imagens */
+        margin: 10px auto; /* Centraliza as imagens */
+    }
+
+    /* Outras propriedades que você já possui */
+    .container {
+        padding: 10px;
+    }
+
+    .popup-content {
+        width: 80%;
+    }
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Impede o arraste horizontal */
+        height: 100%; /* Garante que a altura da tela seja 100% */
+    }
+    
+    * {
+        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden; /* Impede o overflow horizontal */
+    }
+    
+    .container, .wecton, .pedro {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+
+/* Responsivo para telas menores que 480px */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .cabecalho {
+        padding: 8px;
+    }
+
+    .cabecalho .logo img {
+        height: 25px;
+    }
+
+    .cabecalho ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho li {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .sobre, .apresentacao, .quemSomos {
+        padding: 10px;
+    }
+
+    .sobre-left, .sobre-right {
+        flex: none;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .sobre-left p, .sobre-right p {
+        font-size: 12px;
+    }
+
+    .imgFerramentas {
+        flex-direction: column;
+    }
+
+    .img-projeto {
+        width: 70px;
+    }
+
+    .game-info, .game-media {
+        margin: 5px 0;
+    }
+
+    .popup-compra .popup-content {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .popup-compra .check-icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-nav button {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+
+    .spinner {
+        width: 25px;
+        height: 25px;
+    }
+
+    .theme-toggle {
+        font-size: 24px;
+    }
+
+    .curriculo-btn {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Impede o arraste horizontal */
+        height: 100%; /* Garante que a altura da tela seja 100% */
+    }
+    
+    * {
+        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden; /* Impede o overflow horizontal */
+    }
+    
+    .container, .wecton, .pedro {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+}

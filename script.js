@@ -305,3 +305,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//acessibilidade
+function lerTexto() {
+    // Se a API de síntese de fala está disponível
+    if ('speechSynthesis' in window) {
+        var synth = window.speechSynthesis;
+        var textoParaLer = document.body.innerText; // Pega o conteúdo de texto da página
+        var utterThis = new SpeechSynthesisUtterance(textoParaLer); // Cria uma instância de leitura
+
+        // Configura a voz e idioma
+        utterThis.lang = 'pt-BR'; // Configura para português
+        utterThis.pitch = 1; // Alterando o tom da voz
+        utterThis.rate = 1; // Velocidade de leitura
+
+        // Começa a leitura do texto
+        synth.speak(utterThis);
+    } else {
+        alert("Desculpe, sua versão do navegador não suporta leitura de tela.");
+    }
+}
