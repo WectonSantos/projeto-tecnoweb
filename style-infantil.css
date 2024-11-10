@@ -1,21 +1,23 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #d5d9dd; 
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: rgba(255, 229, 153, 1); 
     height: 100%; /* Garantir que o body ocupe toda a altura da página */
     display: block; /* Usado para centralizar conteúdo verticalmente */
     flex-direction: column;
     justify-content: center; /* Centraliza o conteúdo verticalmente */
     align-items: center; 
     width: 100%; /* Garantir que o corpo ocupe toda a largura */
-
+    background-image: url('https://st2.depositphotos.com/3224447/12093/v/450/depositphotos_120935858-stock-illustration-seamless-pattern-with-doodle-children.jpg'); /* Substitua pela URL de sua imagem */
+    background-repeat: repeat; /* Faz com que a imagem de fundo seja repetida */
+    background-blend-mode: soft-light;
 }
 
 .cabecalho {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(255, 105, 180, 1);
     padding: 15px 0; 
     width: 100%;
     flex: 1;
@@ -45,13 +47,13 @@ body {
 
 .cabecalho a {
     text-decoration: none; 
-    color: #ffffff; 
+    color: rgba(40, 40, 40, 1)    ; 
     font-size: 18px; 
     transition: color 0.3s; 
 }
 
 .cabecalho a:hover {
-    color: #a5a5a5; 
+    color: #000000; 
 }
 
 /* Botão de alternância de tema */
@@ -85,7 +87,7 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    background-color: #ffffff; /* Fundo leve e neutro */
+    background-color:rgba(152, 255, 152, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: all 0.3s ease-in-out; /* Transição suave para hover */
 }
@@ -165,23 +167,21 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
+    background-color: rgba(255, 165, 0, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Transição suave para hover */
 }
-/*
-.quemSomos{
-    width: 100%; 
-    margin: 10px 0; 
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    align-items: center;
-}*/
+.apresentacao:hover{
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */   
+}
 .quemSomos {
     width: 100%; 
     margin: 40px 0; 
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
-    background-color: #ffffff; /* Fundo leve e neutro */
+    background-color: rgba(255, 255, 153, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: all 0.3s ease-in-out; /* Transição suave para hover */
 }
@@ -232,8 +232,8 @@ body {
 }
 
 footer{
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgba(255, 105, 180, 1);
+    color: rgba(40, 40, 40, 1); 
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -242,7 +242,6 @@ footer{
     width: 100%;
     bottom: 0;
 }
-
 /*POP UP*/
 .popup {
     display: none; 
@@ -259,7 +258,7 @@ footer{
 }
 
 .popup-content {
-    background-color: #fff;
+    background-color: rgba(255, 105, 180, 1);
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -270,15 +269,17 @@ footer{
 
 }
 .pause-music {
-    background-color: #10881e;
-    color: white;
+    background-color:rgba(152, 255, 152, 1);
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
 }
-
+.pause-music:hover{
+    background-color:rgb(68, 255, 68);
+}
 .curriculo-btn {
     display: inline-block;
     margin-top: 15px;
@@ -438,7 +439,7 @@ h2 {
 }
 
 .buy-button button:hover {
-    background-color: #4e9cfd;
+    background-color: #085e12;
 }
 
 .game-media {
@@ -504,14 +505,41 @@ h2 {
 
 /* fim jogo*/
 
-.imgUnisanta{
-    padding-top: 20%;
+/* interativo p mulecada */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
+
+.img-projeto:hover, .imgWecton:hover, .imgPedro:hover {
+    transform: scale(1.1) rotate(5deg); /* Rotaciona e aumenta a imagem */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra maior ao passar o mouse */
+}
+
+.sobre:hover {
+    transform: translateY(-10px); /* Levanta o elemento ao passar o mouse */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    background-color:rgb(103, 255, 103);
+}
+.apresentacao:hover {
+    transform: translateY(-10px); /* Levanta o elemento ao passar o mouse */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    background-color: rgb(255, 145, 0);
+}
+.quemSomos:hover{
+    transform: translateY(-10px); /* Levanta o elemento ao passar o mouse */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    background-color: rgb(255, 255, 100);
+}
+
 
 /* Tema Escuro */
 body.dark-theme {
-    background-color: #121212; /* Cor de fundo escuro */
+    background-color: rgba(45, 45, 45, 1); /* Cor de fundo escuro */
     color: #f5f5f5; /* Cor do texto escuro */
+    background-image: none; /* Remove a imagem de fundo no tema escuro */
 }
 
 body.dark-theme header {
@@ -534,7 +562,6 @@ body.dark-theme .quemSomos {
 }
 
 .theme-toggle {
-    background: none;
     border: none;
     color: #000;
     font-size: 24px;
@@ -557,9 +584,6 @@ body.dark-theme .theme-toggle {
     outline: none;
 }
 
-.theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0); /* Efeito de hover */
-}
 /* Quando no tema escuro, o ícone de alternância muda de cor */
 body.dark-theme .theme-toggle {
     color: #fff; /* Cor do botão no tema escuro */
@@ -596,7 +620,7 @@ body.dark-theme .theme-toggle:hover {
 
 /* Efeitos para botões e outras seções */
 button, .curriculo-btn {
-    background-color: #3498db;
+    background-color: rgba(255, 165, 0, 1);
     color: white;
     border-radius: 5px;
     padding: 12px 20px;
@@ -606,14 +630,13 @@ button, .curriculo-btn {
     transition: background-color 0.3s ease;
 }
 
-body.dark-theme button,
 body.dark-theme .curriculo-btn {
-    background-color: #2c3e50; /* Cor de fundo para botões no tema escuro */
+    background-color: rgb(164, 164, 164); /* Cor de fundo para botões no tema escuro */
 }
 
-body.dark-theme button:hover,
-body.dark-theme .curriculo-btn:hover {
-    background-color: #34495e; /* Cor de hover para botões no tema escuro */
+
+.curriculo-btn:hover {
+    background-color: rgb(255, 132, 0);
 }
 /* Estilo do pop-up no tema escuro */
 body.dark-theme .popup-content {
@@ -654,4 +677,18 @@ body.dark-theme .curriculo-btn {
 
 body.dark-theme .curriculo-btn:hover {
     background-color: #2980b9; /* Cor de fundo azul mais escuro ao passar o mouse */
+}
+/* Footer no tema escuro */
+body.dark-theme footer {
+    background-color: rgba(30, 30, 30, 1); /* Cor de fundo escura para o footer */
+    color: #f5f5f5; /* Cor do texto clara para o footer */
+}
+
+body.dark-theme footer a {
+    color: #f5f5f5; /* Links com cor clara no footer */
+    transition: color 0.3s ease; /* Suaviza a transição para o hover */
+}
+
+body.dark-theme footer a:hover {
+    color: #3498db; /* Cor de hover para os links no footer */
 }

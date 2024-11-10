@@ -270,3 +270,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+// audio interativo p mulecada
+document.querySelector('.theme-toggle').addEventListener('mouseover', function() {
+    const audio = new Audio('caminho-do-som.mp3');
+    audio.play();
+});
