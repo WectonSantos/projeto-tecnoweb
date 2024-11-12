@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gbJogo = new System.Windows.Forms.GroupBox();
+            this.pbImagem2 = new System.Windows.Forms.PictureBox();
+            this.pbImagem1 = new System.Windows.Forms.PictureBox();
             this.btJogar = new System.Windows.Forms.Button();
             this.btAutores = new System.Windows.Forms.Button();
             this.btReiniciar = new System.Windows.Forms.Button();
@@ -55,12 +57,14 @@
             this.pbBox2 = new System.Windows.Forms.PictureBox();
             this.pbBox1 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pbImagem1 = new System.Windows.Forms.PictureBox();
-            this.pbImagem2 = new System.Windows.Forms.PictureBox();
+            this.pbPan1 = new System.Windows.Forms.PictureBox();
             this.gbJogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem1)).BeginInit();
             this.pPlacar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom1)).BeginInit();
+            this.pPrimeiro.SuspendLayout();
             this.pImagens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox7)).BeginInit();
@@ -70,8 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPan1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbJogo
@@ -97,6 +100,24 @@
             this.gbJogo.TabIndex = 0;
             this.gbJogo.TabStop = false;
             this.gbJogo.Text = "CLASSIFICAR E ORGANIZAR";
+            // 
+            // pbImagem2
+            // 
+            this.pbImagem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagem2.Location = new System.Drawing.Point(597, 13);
+            this.pbImagem2.Name = "pbImagem2";
+            this.pbImagem2.Size = new System.Drawing.Size(50, 50);
+            this.pbImagem2.TabIndex = 11;
+            this.pbImagem2.TabStop = false;
+            // 
+            // pbImagem1
+            // 
+            this.pbImagem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagem1.Location = new System.Drawing.Point(260, 13);
+            this.pbImagem1.Name = "pbImagem1";
+            this.pbImagem1.Size = new System.Drawing.Size(50, 50);
+            this.pbImagem1.TabIndex = 8;
+            this.pbImagem1.TabStop = false;
             // 
             // btJogar
             // 
@@ -238,10 +259,12 @@
             // 
             this.pPrimeiro.BackColor = System.Drawing.Color.MediumTurquoise;
             this.pPrimeiro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pPrimeiro.Controls.Add(this.pbPan1);
             this.pPrimeiro.Location = new System.Drawing.Point(238, 69);
             this.pPrimeiro.Name = "pPrimeiro";
             this.pPrimeiro.Size = new System.Drawing.Size(300, 300);
             this.pPrimeiro.TabIndex = 1;
+            this.pPrimeiro.Click += new System.EventHandler(this.pPrimeiro_Click);
             // 
             // pImagens
             // 
@@ -331,24 +354,16 @@
             this.pbBox1.Size = new System.Drawing.Size(50, 50);
             this.pbBox1.TabIndex = 0;
             this.pbBox1.TabStop = false;
+            this.pbBox1.Click += new System.EventHandler(this.pbBox1_Click);
             // 
-            // pbImagem1
+            // pbPan1
             // 
-            this.pbImagem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem1.Location = new System.Drawing.Point(260, 13);
-            this.pbImagem1.Name = "pbImagem1";
-            this.pbImagem1.Size = new System.Drawing.Size(50, 50);
-            this.pbImagem1.TabIndex = 8;
-            this.pbImagem1.TabStop = false;
-            // 
-            // pbImagem2
-            // 
-            this.pbImagem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagem2.Location = new System.Drawing.Point(597, 13);
-            this.pbImagem2.Name = "pbImagem2";
-            this.pbImagem2.Size = new System.Drawing.Size(50, 50);
-            this.pbImagem2.TabIndex = 11;
-            this.pbImagem2.TabStop = false;
+            this.pbPan1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPan1.Location = new System.Drawing.Point(36, 29);
+            this.pbPan1.Name = "pbPan1";
+            this.pbPan1.Size = new System.Drawing.Size(50, 50);
+            this.pbPan1.TabIndex = 8;
+            this.pbPan1.TabStop = false;
             // 
             // Form1
             // 
@@ -363,10 +378,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.gbJogo.ResumeLayout(false);
             this.gbJogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem1)).EndInit();
             this.pPlacar.ResumeLayout(false);
             this.pPlacar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSom1)).EndInit();
+            this.pPrimeiro.ResumeLayout(false);
             this.pImagens.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox7)).EndInit();
@@ -376,8 +394,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPan1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -411,6 +428,7 @@
         private System.Windows.Forms.PictureBox pbBox1;
         private System.Windows.Forms.PictureBox pbImagem2;
         private System.Windows.Forms.PictureBox pbImagem1;
+        private System.Windows.Forms.PictureBox pbPan1;
     }
 }
 
