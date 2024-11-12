@@ -1,211 +1,171 @@
-﻿using System;
+﻿using Projeto_03_C_.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using System.Speech.Synthesis;
 
 namespace Projeto_03_C_
 {
     public partial class Form1 : Form
     {
-        private int comecou = 0;
-        Random aleatorio = new Random();
-        int x, y;
-        private Point localOriginal;
-
         public Form1()
         {
             InitializeComponent();
-            ConfigureDragAndDrop();
-
-        }
-        private void ConfigureDragAndDrop()
-        {
-            pbJogo0.AllowDrop = true;
-            pbJogo1.AllowDrop = true;
-            pbJogo2.AllowDrop = true;
-            pbJogo3.AllowDrop = true;
-            pbJogo4.AllowDrop = true;
-            pbJogo5.AllowDrop = true;
-            pbJogo6.AllowDrop = true;
-            pbJogo7.AllowDrop = true;
-
-            pbJogo0.MouseDown += PbImagem_MouseDown;
-            pbJogo1.MouseDown += PbImagem_MouseDown;
-            pbJogo2.MouseDown += PbImagem_MouseDown;
-            pbJogo3.MouseDown += PbImagem_MouseDown;
-            pbJogo4.MouseDown += PbImagem_MouseDown;
-            pbJogo5.MouseDown += PbImagem_MouseDown;
-            pbJogo6.MouseDown += PbImagem_MouseDown;
-            pbJogo7.MouseDown += PbImagem_MouseDown;
-
-            pbJogo0.DragEnter += PbImagem_DragEnter;
-            pbJogo1.DragEnter += PbImagem_DragEnter;
-            pbJogo2.DragEnter += PbImagem_DragEnter;
-            pbJogo3.DragEnter += PbImagem_DragEnter;
-            pbJogo4.DragEnter += PbImagem_DragEnter;
-            pbJogo5.DragEnter += PbImagem_DragEnter;
-            pbJogo6.DragEnter += PbImagem_DragEnter;
-            pbJogo7.DragEnter += PbImagem_DragEnter;
-
-            pbJogo0.DragDrop += PbImagem_DragDrop;
-            pbJogo1.DragDrop += PbImagem_DragDrop;
-            pbJogo2.DragDrop += PbImagem_DragDrop;
-            pbJogo3.DragDrop += PbImagem_DragDrop;
-            pbJogo4.DragDrop += PbImagem_DragDrop;
-            pbJogo5.DragDrop += PbImagem_DragDrop;
-            pbJogo6.DragDrop += PbImagem_DragDrop;
-            pbJogo7.DragDrop += PbImagem_DragDrop;
-        }
-
-        private void PbImagem_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (sender is PictureBox pb)
+            btReiniciar.Enabled = false;
+            for (int i = 1; i <= 8; i++)
             {
-                localOriginal = pb.Location; // Salva a posição original
-                pb.DoDragDrop(pb.Image, DragDropEffects.Move);
+                string nomePictureBox = $"pbBox{i}";
+                PictureBox pb = (PictureBox)this.Controls.Find(nomePictureBox, true).FirstOrDefault(); //Instância na variável pb o nome do picture box de forma funcional.
+                pb.Enabled = false;
             }
         }
 
-        private void PbImagem_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(Image)))
-            {
-                e.Effect = DragDropEffects.Move;
-            }
-        }
+        #region Drag and Drop
 
-        private void PbImagem_DragDrop(object sender, DragEventArgs e)
+            
+        #endregion
+
+        #region Variavéis Globais
+    Random randomizaQuadrados = new Random();
+        int quantidadeQuadrados;
+        byte[][] imagensBytes = new byte[][]
         {
-            if (e.Data.GetDataPresent(typeof(Image)))
+            Resources.Estrela,     // Imagem 1 no formato byte[]
+            Resources.Diamante, // Imagem 2 no formato byte[]
+            Resources.Arvore
+        };
+        string[] nomesImagens = new string[]
+        {
+            "Estrela",
+            "Diamante",
+            "Arvore"
+        };
+        int objeto1, objeto2;
+        #endregion
+
+        #region Botão jogar
+        private void btJogar_Click(object sender, EventArgs e)
+        {
+            btJogar.Enabled = false;
+            btReiniciar.Enabled=true;
+
+            quantidadeQuadrados = randomizaQuadrados.Next(1, 9);
+
+            objeto1 = randomizaQuadrados.Next(0, 3);
+            objeto2 = randomizaQuadrados.Next(0, 3);
+
+            while (objeto2 == objeto1)
             {
-                PictureBox pb = sender as PictureBox;
-                if (pb != null)
+                objeto2 = randomizaQuadrados.Next(0, 3);
+            }
+
+            lblPrimeiro.Text = nomesImagens[objeto1];
+            lblSegundo.Text = nomesImagens[objeto2];
+
+            byte[] imagemBytes1 = imagensBytes[objeto1], imagemBytes2 = imagensBytes[objeto2];
+
+            using (MemoryStream ms = new MemoryStream(imagemBytes1))
+            {
+                pbImagem1.BackgroundImage = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(imagemBytes2))
+            {
+                pbImagem2.BackgroundImage = Image.FromStream(ms);
+            }
+
+            for (int i = 1; i <= quantidadeQuadrados; i++)
+            {
+                string nomePictureBox = $"pbBox{i}";
+                PictureBox pb = (PictureBox)this.Controls.Find(nomePictureBox, true).FirstOrDefault();
+                int time;
+                pb.Enabled = true;
+
+                time = randomizaQuadrados.Next(1, 101) % 2;         
+
+                if (time == 0)
                 {
-                    pb.Image = (Image)e.Data.GetData(typeof(Image)); // Define a imagem do PictureBox
-                    pb.Location = new Point(pb.Location.X, pb.Location.Y); // Ajuste se necessário
+                    using (MemoryStream ms = new MemoryStream(imagemBytes1))
+                    {
+                        pb.BackgroundImage = Image.FromStream(ms);// Converte os bytes para uma imagem
+                    }
+                }
+                else if (time == 1)
+                {
+                    using (MemoryStream ms = new MemoryStream(imagemBytes2))
+                    {
+                        pb.BackgroundImage = Image.FromStream(ms); // Converte os bytes para uma imagem
+                    }
                 }
             }
-        }
-
-        private void gbJogo_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btReiniciar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnJogar_Click(object sender, EventArgs e)
-        {
-            comecou = 1;
-            x = aleatorio.Next(4, 9);
-
-            int[] vetorImagens = new int[x + 1];
-
-            for (int i = 0; i < x; i++)
-            {
-                int y = aleatorio.Next(0, 100);
-
-                if (y % 2 == 0)
-                {
-                    vetorImagens[i] = 0;
-                }
-                else
-                {
-                    vetorImagens[i] = 1;
-                }
-            }
-
-            processaImagens(vetorImagens);
-
-
-        }
-
-        #region lixo
-        private void pbJogo0_DragDrop(object sender, DragEventArgs e)
-        {
-            pbJogo0.AllowDrop = true;
         }
         #endregion
 
-        void processaImagens(int[] vetor)
+        #region som 1 click
+        private void pbSom1_Click(object sender, EventArgs e)
         {
-            #region imagens
-            if (vetor[0] == 0)
-            {
-                pbJogo0.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo0.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[1] == 0)
-            {
-                pbJogo1.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo1.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[2] == 0)
-            {
-                pbJogo2.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo2.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[3] == 0)
-            {
-                pbJogo3.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo3.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[4] == 0)
-            {
-                pbJogo4.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo4.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[5] == 0)
-            {
-                pbJogo5.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo5.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[6] == 0)
-            {
-                pbJogo6.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo6.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            if (vetor[7] == 0)
-            {
-                pbJogo7.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\estrela.png");
-            }
-            else
-            {
-                pbJogo7.Image = Image.FromFile(Directory.GetCurrentDirectory() + "\\quadrado.png");
-            }
-            #endregion
-
+            SpeechSynthesizer _SS = new SpeechSynthesizer();
+            _SS.Volume = 100;
+            _SS.Rate = 1;
+            _SS.Speak(nomesImagens[objeto1]);
         }
+        #endregion
 
+        #region Som 2 click
+        private void pbSom2_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer _SS = new SpeechSynthesizer();
+            _SS.Volume = 100;
+            _SS.Rate = 1;
+            _SS.Speak(nomesImagens[objeto2]);
+        }
+        #endregion
+
+        #region Botão Reiniciar
+        private void btReiniciar_Click(object sender, EventArgs e)
+        {
+            btJogar.Enabled = true;
+            btReiniciar.Enabled = false;
+
+            lblPrimeiro.Text = "- - - - - - - - - -";
+            lblSegundo.Text = "- - - - - - - - - -";
+
+            objeto1 = 0;
+            objeto2 = 0;
+
+            for (int i = 1; i <= 8; i++)
+            {
+                string nomePictureBox = $"pbBox{i}";
+                PictureBox pb = (PictureBox)this.Controls.Find(nomePictureBox, true).FirstOrDefault();
+                pb.BackgroundImage = null;
+                pb.Enabled = false;
+            }
+            pbImagem1.BackgroundImage = null;
+            pbImagem2.BackgroundImage = null;
+        }
+        #endregion
+
+        #region Botão Autores
+        private void btAutores_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pedro Henrique Moreira Santos Cretella - 226013 \n Wecton Santos - 000000", "Autores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+
+        #region Form Closing
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Sair", "Deseja mesmo sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+        #endregion
     }
 }
