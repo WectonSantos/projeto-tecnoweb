@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const pessoas = [
         {
             nome: "Pedro Henrique Morereira",
-            info: "Programador",
+            info: "Natural de Santos e residente de Cubatão, Pedro tem formações em mecânico de manutenção, Java e C# pelo senai e atualmente cursa engenharia de computação pela UNISANTA se encontrando no 4º semestre, possui inglês fluente nível w12 pela wizzard. Atualmente busca sua primeira oportunidade de emprego na área de tecnologia.",
             musica: "musicas/tony-country.mp3",
             curriculo: "curriculos/curriculoHtml/index.html"
         },
