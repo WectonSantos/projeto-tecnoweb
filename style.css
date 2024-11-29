@@ -2,12 +2,12 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #d5d9dd; 
-    height: 100%; /* Garantir que o body ocupe toda a altura da página */
-    display: block; /* Usado para centralizar conteúdo verticalmente */
+    height: 100%; 
+    display: block; 
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; 
     align-items: center; 
-    width: 100%; /* Garantir que o corpo ocupe toda a largura */
+    width: 100%; 
 
 }
 
@@ -19,21 +19,21 @@ body {
     padding: 15px 0; 
     width: 100%;
     flex: 1;
-    width: 100%; /* Garantir que o cabeçalho ocupe toda a largura da tela */
+    width: 100%; 
 
 }
 .cabecalho .logo img {
     height: 40px;
     padding-left: 20px;
-    flex: 1; /* Faz o logo ocupar o máximo de espaço possível */
+    flex: 1; 
     display: flex;
-    justify-content: flex-start; /* Alinha o logo à esquerda */
+    justify-content: flex-start; 
 }
 
 .cabecalho ul {
     padding: 0; 
     margin: 0; 
-    flex: 2; /* Dá mais espaço para o menu */
+    flex: 2; 
     display: flex;
     justify-content: center;
 }
@@ -54,7 +54,7 @@ body {
     color: #a5a5a5; 
 }
 
-/* Botão de alternância de tema */
+
 .theme-toggle {
     background: none;
     border: none;
@@ -62,7 +62,7 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-    border-radius: 50%; /* Botão circular */
+    border-radius: 50%;
     padding: 10px;
     display: inline-flex;
     justify-content: center;
@@ -71,12 +71,12 @@ body {
 
 .container{
     display: flex;
-    flex-direction: column; /* Itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* Largura total */
-    padding: 20px; /* Espaçamento interno */
-    max-width: 1200px; /* Para evitar que o conteúdo fique muito largo em telas grandes */
-    margin: 0 auto; /* Centraliza o container */
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
 
 }
 .sobre{
@@ -85,13 +85,13 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    background-color: #ffffff; /* Fundo leve e neutro */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: all 0.3s ease-in-out; /* Transição suave para hover */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
 }
 .sobre:hover{
-    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */   
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
 }
 .sobre-content {
     display: flex;
@@ -105,12 +105,12 @@ body {
 .sobre-left p {
     font-size: 18px;
     line-height: 1.6;
-    text-align: justify; /* Alinha o texto de forma justificada */
+    text-align: justify; 
 }
 .sobre-right p {
     font-size: 18px;
     line-height: 1.6;
-    text-align: justify; /* Alinha o texto de forma justificada */
+    text-align: justify; 
 }
 
 .sobre-right img {
@@ -121,31 +121,31 @@ body {
     display: flex;              
     flex-direction: column;     
     align-items: center;         
-    padding: 20px;               /* Adiciona um espaçamento interno */
+    padding: 20px;               
     text-align: center;          
 }
 
 .sobre-right p {
-    margin-bottom: 20px;         /* Adiciona um espaçamento abaixo do texto */
-    font-size: 18px;             /* Ajusta o tamanho do texto */
+    margin-bottom: 20px;         
+    font-size: 18px;             
 }
 
 .imgFerramentas {
-    display: flex;               /* Flexbox para alinhar as imagens lado a lado */
-    justify-content: center;     /* Centraliza as imagens */
-    gap: 20px;                   /* Define o espaço entre as imagens */
+    display: flex;               
+    justify-content: center;     
+    gap: 20px;                   
 }
 
 .img-projeto {
-    width: 120px;                 /* Define uma largura fixa para as imagens */
-    height: auto;                /* Mantém a proporção das imagens */
-    max-height: 140px;           /* Limita a altura das imagens */
-    object-fit: contain;         /* Garante que a imagem se ajuste corretamente */
-    transition: transform 0.3s ease;  /* Adiciona transição para efeito de hover */
+    width: 120px;                 
+    height: auto;                
+    max-height: 140px;           
+    object-fit: contain;         
+    transition: transform 0.3s ease;  
 }
 
 .img-projeto:hover {
-    transform: scale(1.1);       /* Efeito de zoom quando passar o mouse */
+    transform: scale(1.1);       
 }
 
 
@@ -181,20 +181,20 @@ body {
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
-    background-color: #ffffff; /* Fundo leve e neutro */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: all 0.3s ease-in-out; /* Transição suave para hover */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out; 
 }
 
 .quemSomos:hover {
-    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); 
 }
 .nome{
     font-family: 'Roboto', sans-serif; 
     font-weight: bold;
-    color: #333; /* Cor do nome */
-    font-size: 24px; /* Aumenta o tamanho do nome */
+    color: #333; 
+    font-size: 24px; 
     margin: 15px 0;
 }
 .wecton{
@@ -210,10 +210,10 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: 3px solid #000000; /* Adicionar borda branca */
+    border: 3px solid #000000; 
     object-fit: cover; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da imagem */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
@@ -222,10 +222,10 @@ body {
     width: 300px;
     transition: transform 0.3s ease;
     border-radius: 50%;
-    border: 3px solid #000000; /* Adicionar borda branca */
+    border: 3px solid #000000; 
     object-fit: cover; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da imagem */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .infos{
     font-family: 'Times New Roman', Times, serif;
@@ -323,7 +323,7 @@ footer{
 .imgPedro:hover, .imgWecton:hover {
     transform: scale(1.1);
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 
 }
 
@@ -409,11 +409,11 @@ h2 {
     color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: all 0.3s ease-in-out; /* Transição suave para hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out; 
 }
 .game-info:hover{
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */ 
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); 
 }
 
 .game-header h3 {
@@ -470,13 +470,13 @@ h2 {
 
 .carousel-image {
     width: 100%;
-    display: none; /* As imagens começam ocultas */
+    display: none; 
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
 .carousel-image.active {
-    display: block; /* Exibe a imagem ativa */
+    display: block; 
     opacity: 1; /* Transição suave da opacidade */
 }
 
@@ -653,5 +653,5 @@ body.dark-theme .curriculo-btn {
 }
 
 body.dark-theme .curriculo-btn:hover {
-    background-color: #2980b9; /* Cor de fundo azul mais escuro ao passar o mouse */
+    background-color: #2980b9; /* Corescuro ao passar o mouse */
 }
