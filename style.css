@@ -477,7 +477,7 @@ h2 {
 
 .carousel-image.active {
     display: block; 
-    opacity: 1; /* Transição suave da opacidade */
+    opacity: 1; 
 }
 
 .carousel-nav {
@@ -510,27 +510,27 @@ h2 {
 
 /* Tema Escuro */
 body.dark-theme {
-    background-color: #121212; /* Cor de fundo escuro */
-    color: #f5f5f5; /* Cor do texto escuro */
+    background-color: #121212;
+    color: #f5f5f5; 
 }
 
 body.dark-theme header {
-    background-color: #1c1c1c; /* Cor do fundo do cabeçalho escuro */
+    background-color: #1c1c1c; 
 }
 
 body.dark-theme .cabecalho a {
-    color: #bbb; /* Cor dos links no tema escuro */
+    color: #bbb; 
 }
 
 body.dark-theme .cabecalho a:hover {
-    color: #fff; /* Cor dos links ao passar o mouse no tema escuro */
+    color: #fff; 
 }
 
 body.dark-theme .sobre,
 body.dark-theme .apresentacao,
 body.dark-theme .quemSomos {
-    background-color: #333; /* Fundo escuro para as seções */
-    color: #f5f5f5; /* Texto claro para as seções */
+    background-color: #333; 
+    color: #f5f5f5;
 }
 
 .theme-toggle {
@@ -540,42 +540,42 @@ body.dark-theme .quemSomos {
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-    border-radius: 50%; /* Botão circular */
+    border-radius: 50%; 
     padding: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Quando no tema escuro, o ícone de alternância muda de cor */
+
 body.dark-theme .theme-toggle {
-    color: #fff; /* Cor do botão no tema escuro */
+    color: #fff; 
 }
 
-/* Adicionar animação ao botão */
+
 .theme-toggle:focus {
     outline: none;
 }
 
 .theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0); /* Efeito de hover */
-}
-/* Quando no tema escuro, o ícone de alternância muda de cor */
-body.dark-theme .theme-toggle {
-    color: #fff; /* Cor do botão no tema escuro */
+    background-color: rgba(0, 0, 0, 0); 
 }
 
-/* Adicionar animação ao botão */
+body.dark-theme .theme-toggle {
+    color: #fff; 
+}
+
+
 .theme-toggle:focus {
     outline: none;
 }
 
 .theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0); /* Efeito de hover */
+    background-color: rgba(0, 0, 0, 0); 
 }
 
 body.dark-theme .theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0); /* Efeito de hover no tema escuro */
+    background-color: rgba(0, 0, 0, 0); 
 }
 .theme-toggle {
     background: none;
@@ -591,10 +591,10 @@ body.dark-theme .theme-toggle:hover {
 }
 
 .theme-toggle:hover {
-    transform: rotate(180deg); /* Efeito divertido de rotação */
+    transform: rotate(180deg); 
 }
 
-/* Efeitos para botões e outras seções */
+
 button, .curriculo-btn {
     background-color: #3498db;
     color: white;
@@ -608,50 +608,50 @@ button, .curriculo-btn {
 
 body.dark-theme button,
 body.dark-theme .curriculo-btn {
-    background-color: #2c3e50; /* Cor de fundo para botões no tema escuro */
+    background-color: #2c3e50; 
 }
 
 body.dark-theme button:hover,
 body.dark-theme .curriculo-btn:hover {
-    background-color: #34495e; /* Cor de hover para botões no tema escuro */
+    background-color: #34495e; 
 }
-/* Estilo do pop-up no tema escuro */
+
 body.dark-theme .popup-content {
-    background-color: #333; /* Fundo escuro para o conteúdo do pop-up */
-    color: #f5f5f5; /* Cor do texto claro para contraste */
+    background-color: #333; 
+    color: #f5f5f5; 
 }
 
-/* Estilo do título no pop-up */
+
 body.dark-theme .popup-content h2 {
-    color: #3498db; /* Cor azul para o título do pop-up */
+    color: #3498db; 
 }
 
-/* Estilo do texto no pop-up */
+
 body.dark-theme .popup-content p {
-    color: #f5f5f5; /* Texto claro para uma boa legibilidade */
+    color: #f5f5f5; 
 }
 
-/* Estilo do botão de fechar no pop-up */
+
 body.dark-theme .close-btn {
-    color: #fff; /* Cor branca para o botão de fechar */
+    color: #fff; 
 }
 
-/* Estilo do botão de pausar música no pop-up */
+
 body.dark-theme .pause-music {
-    background-color: #2980b9; /* Cor de fundo azul para o botão */
-    color: #fff; /* Cor do texto do botão */
+    background-color: #2980b9;
+    color: #fff; 
 }
 
 body.dark-theme .pause-music:hover {
-    background-color: #3498db; /* Cor de fundo azul mais escuro ao passar o mouse */
+    background-color: #3498db; 
 }
 
-/* Estilo do link para o currículo no pop-up */
+
 body.dark-theme .curriculo-btn {
-    background-color: #3498db; /* Cor de fundo azul para o link */
-    color: white; /* Cor do texto do link */
+    background-color: #3498db; 
+    color: white;
 }
 
 body.dark-theme .curriculo-btn:hover {
-    background-color: #2980b9; /* Corescuro ao passar o mouse */
+    background-color: #2980b9; 
 }
