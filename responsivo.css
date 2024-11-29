@@ -127,12 +127,12 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Impede o arraste horizontal */
-        height: 100%; /* Garante que a altura da tela seja 100% */
+        overflow-x: hidden; 
+        height: 100%; 
     }
     
     * {
-        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
@@ -140,7 +140,7 @@
     body {
         font-family: Arial, sans-serif;
         line-height: 1.5;
-        overflow-x: hidden; /* Impede o overflow horizontal */
+        overflow-x: hidden; 
     }
     
     .container, .wecton, .pedro {
@@ -237,20 +237,18 @@
     }
     .wecton, .pedro {
         display: block;
-        margin: 0 auto; /* Centraliza os elementos */
-        padding-left: 0; /* Remove o padding-left para evitar o desalinhamento */
+        margin: 0 auto; 
+        padding-left: 0; 
     }
     
-    /* Ajusta o tamanho das imagens para garantir que fiquem bem centralizadas */
     .imgWecton, .imgPedro {
-        margin: 0 auto; /* Centraliza as imagens */
+        margin: 0 auto; 
     }
     
-    /* Garantir que o layout de `.img-projeto` também se ajuste responsivamente */
     .img-projeto {
-        width: 100%; /* Para imagens dentro de contêineres flexíveis */
-        max-width: 150px; /* Define um tamanho máximo para as imagens */
-        margin: 10px auto; /* Centraliza as imagens */
+        width: 100%; 
+        max-width: 150px; 
+        margin: 10px auto; 
     }
 
     /* Outras propriedades que você já possui */
@@ -265,12 +263,12 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Impede o arraste horizontal */
-        height: 100%; /* Garante que a altura da tela seja 100% */
+        overflow-x: hidden; 
+        height: 100%; 
     }
     
     * {
-        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        box-sizing: border-box; 
         margin: 0;
         padding: 0;
     }
@@ -278,7 +276,7 @@
     body {
         font-family: Arial, sans-serif;
         line-height: 1.5;
-        overflow-x: hidden; /* Impede o overflow horizontal */
+        overflow-x: hidden; 
     }
     
     .container, .wecton, .pedro {
@@ -384,12 +382,12 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Impede o arraste horizontal */
-        height: 100%; /* Garante que a altura da tela seja 100% */
+        overflow-x: hidden; 
+        height: 100%; 
     }
     
     * {
-        box-sizing: border-box; /* Garante que padding e bordas sejam dentro da largura dos elementos */
+        box-sizing: border-box; 
         margin: 0;
         padding: 0;
     }
@@ -397,7 +395,7 @@
     body {
         font-family: Arial, sans-serif;
         line-height: 1.5;
-        overflow-x: hidden; /* Impede o overflow horizontal */
+        overflow-x: hidden; 
     }
     
     .container, .wecton, .pedro {
